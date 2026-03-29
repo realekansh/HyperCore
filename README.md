@@ -1,4 +1,4 @@
-# HyperCore V0.3.0
+# HyperCore
 
 HyperCore is a minimal Telegram core for userbot-first deployments with optional bot polling support. V0.3.0 is scoped to proving that the core boots, loads commands, persists sudo users, performs git-based updates, and restarts cleanly in a real Telegram environment.
 
