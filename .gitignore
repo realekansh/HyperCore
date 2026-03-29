@@ -1,0 +1,10 @@
+.env
+runtime/
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite3
+*.session
+*.session-journal
+.pytest_cache/
+.coverage

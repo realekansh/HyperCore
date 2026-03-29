@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$ROOT_DIR"
+
+log() {
+  printf '[startup] %s\n' "$1"
+}
+
+if ! command -v python >/dev/null 2>&1; then
+  log "Python is required but was not found in PATH."
+  exit 1
+fi
+
+if [ ! -f ".env" ]; then
+  log "Missing .env file in the project root."
+  exit 1
+fi
+
+log "Launching HyperCore."
+exec python -m hypercore "$@"
